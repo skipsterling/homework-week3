@@ -102,3 +102,47 @@ function specialOption(){
 return specialInspect;
 }
 
+// This function will take all data in previous functions to create a password.
+function generatePassword(){
+    determineLength();
+    console.log(passwordLength);
+    uppercaseOption();
+    console.log(upInspect);
+    numberOption();
+    console.log(numInspect);
+    specialOption();
+    console.log(specialInspect);
+
+    var characters = charLow;
+    var password = "";
+    if (upInspect && numInspect && specialInspect){
+        characters += charUp + charNum + charSpecial;
+        
+    }else if (upInspect && numInspect){
+        characters += charUp + charNum;
+
+    }else if (numInspect && specialInspect){
+        characters += charNum + charSpecial;
+
+    }else if (upInspect && specialInspect){
+        characters += charUp + charSpecial;
+    
+    }else if (upInspect){
+        characters += charUp;
+
+    }else if (numInspect){
+        characters += charNum;
+
+    }else if (specialInspect){
+        characters += charSpecial;
+
+    }else {
+        characters === charLow;
+    }
+    
+    for (var i = 0; i < passwordLength; i++){
+        password += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return password;
+}
+
