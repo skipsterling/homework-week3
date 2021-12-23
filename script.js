@@ -146,3 +146,12 @@ function generatePassword(){
     return password;
 }
 
+//This writes the password to the #password input 
+function writePassword() {
+    var pword = "";
+    pword = generatePassword();
+    var passwordText = document.querySelector("#password");
+    passwordText.value = pword;
+  }
+ //Add event listener to generate button.
+generateBtn.addEventListener("click", writePassword);

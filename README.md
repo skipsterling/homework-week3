@@ -7,3 +7,6 @@ please see screen shot attached <img src="images/SS-hww3-functions.png" alt="scr
 
 a function has been created to select all above information to create a password. 
 please see screen shot attached <img src="images/SS-hww3-pws.png" alt="screen shot of password selector"/>
+
+a function has been created to write password to the #password input
+please see screenshot attached. <img src="images-SS-hww3-writepass.png"/>
